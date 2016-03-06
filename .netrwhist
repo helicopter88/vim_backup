@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/homes/dfm114/arm11_3'
-let g:netrw_dirhist_2='/homes/dfm114/arm11_3/src'
-let g:netrw_dirhist_3='/homes/dfm114/arm11_3'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/homes/dfm114/cstuff/Pintos_27/src'
+let g:netrw_dirhist_2='/homes/dfm114/cstuff/Pintos_27/src/threads'
+let g:netrw_dirhist_3='/homes/dfm114/cstuff/Pintos_27/src/userprog'
+let g:netrw_dirhist_4='/homes/dfm114/cstuff/Pintos_27/src'
+let g:netrw_dirhist_5='/homes/dfm114/cstuff/Pintos_27/src/threads'
+let g:netrw_dirhist_6='/homes/dfm114/cstuff/Pintos_27/src/userprog'

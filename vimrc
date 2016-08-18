@@ -6,14 +6,16 @@ set incsearch ignorecase hlsearch
 set nocompatible              " be iMproved, required
 set number
 set ruler
+colorscheme base16-default-dark
+let base16colorspace=256
 set background=dark
-colorscheme solarized
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'chriskempson/base16-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
@@ -41,7 +43,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 let g:ycm_confirm_extra_conf = 0
 let g:tmux_preset = 'tmux'
-let g:airline_theme = 'badwolf'
+let g:airline_theme = 'luna'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
@@ -50,14 +52,15 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
   \ }
 map <C-n> :NERDTreeToggle<CR>
